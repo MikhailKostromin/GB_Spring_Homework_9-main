@@ -1,0 +1,18 @@
+server:
+  port: 8765
+
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: Shop
+          uri: http://localhost:8080/
+          predicates:
+            - Path=/shop/**
+        - id: Warehouse
+          uri: http://localhost:8081/
+          predicates:
+            - Path=/warehouse/**

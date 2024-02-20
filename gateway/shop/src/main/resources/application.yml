@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: microservice-shop
+
+server:
+  port: 8080
+
+api:
+  storage:
+    uriGetProducts: http://localhost:8081/warehouse/getProducts
+    uriGetProduct: http://localhost:8081/warehouse/getProduct/
+    reserveProduct: http://localhost:8081/warehouse/reserveProduct
