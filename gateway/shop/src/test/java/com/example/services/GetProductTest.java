@@ -38,7 +38,7 @@ public class GetProductTest {
         Product expectedProduct = new Product(productId, "Laptop", 10, 1200);
         String mockUrl = "http://localhost:8081/warehouse/getProduct/" + productId;
 
-        //  Подменяем url
+        //  Меняем url
         when(urlProperties.getUriGetProduct()).thenReturn("http://localhost:8081/warehouse/getProduct/");
         when(restTemplate.exchange(mockUrl,
                 HttpMethod.GET,
